@@ -2,9 +2,12 @@ clear all;
 close all;
 clc
 
-%对于类似的txt文件，不含有字符，只有数字
+%只需要改3个地方
+%1.数据的txt路径
 txt_path = 'D:\Datasets\origin\拟合\1.txt';
+%2.文件里的点的个数
 num_points = 125;
+%3.得分阈值:只有结果得分t大于阈值的数据会被作为用来拟合用的数据
 threshold = 0.8;
 data=load(txt_path);
 x = data(:,1);
